@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --parallel -r dev",
-    "build": "pnpm -r build",
+    "build": "pnpm --filter @decocart/web build",
+    "build:api": "pnpm --filter @decocart/api build",
     "typecheck": "pnpm -r typecheck",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "deploy:api": "pnpm --filter @decocart/api deploy"
   },
   "engines": {
     "node": ">=20.0.0"
