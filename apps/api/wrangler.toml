@@ -1,0 +1,29 @@
+name = "decocart-api"
+main = "src/index.ts"
+compatibility_date = "2024-10-22"
+compatibility_flags = ["nodejs_compat"]
+
+# ----- Cloudflare D1 (Database) -----
+[[d1_databases]]
+binding = "DB"
+database_name = "decocart-db"
+database_id = "REPLACE_WITH_REAL_D1_ID"
+
+# ----- Cloudflare R2 (Media Storage) -----
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "decocart-media"
+
+# ----- Cloudflare KV (Cache / Session) -----
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_WITH_REAL_KV_ID"
+
+# ----- Environment Variables -----
+[vars]
+ENVIRONMENT = "development"
+APP_URL = "http://localhost:5173"
+
+[env.production.vars]
+ENVIRONMENT = "production"
+APP_URL = "https://decocart.pages.dev"
