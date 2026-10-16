@@ -26,4 +26,4 @@ APP_URL = "http://localhost:5173"
 
 [env.production.vars]
 ENVIRONMENT = "production"
-APP_URL = "https://decocart.pages.dev"
+APP_URL = "https://dba317e5.decocart.pages.dev"
